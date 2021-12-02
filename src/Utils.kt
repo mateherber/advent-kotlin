@@ -13,6 +13,12 @@ fun String.inputStrings() = File("inputs", "$this.txt").readLines()
 fun String.inputInts() = inputStrings().map { it.toInt() }
 
 /**
+ * Maps the given string list to string integer pairs.
+ */
+fun List<String>.toStringIntPairs() =
+    map { input -> input.split(" ").let { split -> split[0] to split[1].toInt() } }
+
+/**
  * Converts string to md5 hash.
  */
 fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)

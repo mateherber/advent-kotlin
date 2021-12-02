@@ -1,5 +1,4 @@
 fun main() {
-    // test if implementation meets criteria from the description, like:
     val testInput = listOf(199, 200, 208, 210, 200, 207, 240, 269, 260, 263)
     check(part1(testInput) == 7)
     check(part2(testInput) == 5)
