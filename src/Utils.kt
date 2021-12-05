@@ -19,6 +19,12 @@ fun List<String>.toStringIntPairs() =
     map { input -> input.split(" ").let { split -> split[0] to split[1].toInt() } }
 
 /**
+ * Maps the given binary string representations to integers.
+ */
+fun List<String>.binaryToInt() =
+    map { Integer.parseInt(it, 2); }
+
+/**
  * Converts string to md5 hash.
  */
 fun String.md5(): String = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray())).toString(16)
