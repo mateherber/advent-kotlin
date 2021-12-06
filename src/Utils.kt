@@ -19,6 +19,13 @@ fun List<String>.toStringIntPairs() =
     map { input -> input.split(" ").let { split -> split[0] to split[1].toInt() } }
 
 /**
+ * Parses an int pair from a comma separated string
+ */
+fun String.parseIntPair(): Pair<Int, Int> {
+    return split(",").map { it.toInt() }.let { it[0] to it[1] }
+}
+
+/**
  * Maps the given binary string representations to integers.
  */
 fun List<String>.binaryToInt() =
